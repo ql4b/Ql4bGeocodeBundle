@@ -1,5 +1,5 @@
 <?php
-namespace Ql4b\Bundle\MandrillBundle\DependencyInjection;
+namespace Ql4b\Bundle\GeocodeBundle\DependencyInjection;
 
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -7,7 +7,7 @@ use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 use Symfony\Component\Config\FileLocator;
 
 
-class Ql4bMandrillExtension extends Extension {
+class Ql4bGeocodeExtension extends Extension {
     
 	public function load(array $configs, ContainerBuilder $container){
 		
