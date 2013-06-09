@@ -95,5 +95,17 @@ class Response
         return $results;
     }
     
+    /**
+     * @return boolean
+     */
+    public function isAmbiguous(){
+    
+        if ($this->ambiguous === false)
+            return false;
+        	
+        return true;
+        	
+    }
+    
     
 }
