@@ -83,14 +83,14 @@ class Client
         try {
         
             $response = $client->send();
-            return $response;
+            return new Response($response);
         
         } catch (HttpException\RuntimeException $e){
         
             throw new Exception($e->getMessage(), null, $e);
         }
         
-        return new Response($response);
+        
         
     }
     
