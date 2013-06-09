@@ -90,7 +90,7 @@ class Client
             throw new Exception($e->getMessage(), null, $e);
         }
         
-        return $response;
+        return new Response($response);
         
     }
     
