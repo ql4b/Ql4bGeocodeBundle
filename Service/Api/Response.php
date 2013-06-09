@@ -46,8 +46,7 @@ class Response
             
             $xml = new \SimpleXMLElement($content);
             
-            if ((string) $xml->status !== self::STATUS_OK)
-                return;
+            $this->status = (string) $xml->status;
             
             if (count($xml->result) > 1)
                 $this->ambiguous = true;
