@@ -13,8 +13,6 @@ class Response
     const STATUS_HTTP_ERROR         = 'HTTP_ERROR';
     const STATUS_PARSING_ERROR      = 'PARSING_ERROR';
     
-    
-    
     /**
      * @var string
      */
@@ -75,7 +73,7 @@ class Response
     }
     
     /**
-     * Get Resposne Status
+     * @return string
      */
     public function getStatus(){
     

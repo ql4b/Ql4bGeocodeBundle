@@ -5,6 +5,13 @@ use Zend\Http\Client as HttpClient;
 use Zend\Http\Response as HttpResponse;
 use Zend\Http\Client\Exception as HttpException;
 
+/**
+ * 
+ * Google Geocoding API (V2) Client
+ * 
+ * @link http://code.google.com/apis/maps/documentation/geocoding/
+ *
+ */
 class Client
 {
     /**
