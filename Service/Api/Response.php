@@ -88,7 +88,7 @@ class Response
         $results = $this->data->xpath('result');
         
         if (count($results) === 1)
-            $results = array_shift($result);
+            $results = array_shift($results);
         
         return $results;
     }
