@@ -18,6 +18,16 @@ class Client
      * @var string
      */
     private $endpoint;
+
+    /**
+     * @var string
+     */
+    private $key;
+
+    /**
+     * @var language
+     */
+    private $language;
     
     /**
      * @var string
@@ -32,9 +42,11 @@ class Client
     /**
      * @param string $endpoint
      */
-    public function __construct($endpoint)
+    public function __construct($endpoint, $key, $language)
     {
         $this->endpoint = $endpoint;
+        $this->key = $key;
+        $this->language = $language;
     }
     
     
@@ -55,6 +67,9 @@ class Client
         	
         if (null!==$language)
             $params['language'] = $language;
+        else
+            $params['language'] = $this->language;
+
         
         if (null!==$components)
             $params['components'] = $components;
@@ -84,6 +99,8 @@ class Client
         
         if (!isset($params['sensor']))
             $params['sensor'] = 'false';
+
+        $params['key'] = $this->key;
         
         $client->setParameterGet($params);
         

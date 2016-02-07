@@ -13,6 +13,13 @@ class Ql4bGeocodeExtension extends Extension {
 		
 		$loader = new XmlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
 		$loader->load('services.xml');
+
+        $configuration = new Configuration();
+        $config = $this->processConfiguration($configuration, $configs);
+
+        $container->setParameter('geocode.client.endpoint', $config['endpoint']);
+        $container->setParameter('geocode.client.key', $config['key']);
+        $container->setParameter('geocode.client.language', $config['language']);
 		
 	}
 }

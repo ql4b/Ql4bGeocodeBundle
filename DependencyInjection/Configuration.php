@@ -19,6 +19,21 @@ class Configuration implements ConfigurationInterface
     {
         $treeBuilder = new TreeBuilder();
         $rootNode = $treeBuilder->root('geocode');
+
+        $rootNode
+            ->children()
+                ->scalarNode('endpoint')
+                ->isRequired()
+                ->cannotBeEmpty()
+                ->end()
+            ->scalarNode('key')
+                ->isRequired()
+                ->cannotBeEmpty()
+                ->end()
+            ->scalarNode('language')
+                ->defaultValue('en')
+                ->end()
+            ->end();
         
         return $treeBuilder;
     }

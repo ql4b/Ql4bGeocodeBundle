@@ -12,6 +12,8 @@
     <services>
     	<service id="geocode.client" class="%geocode.client.class%">
     		<argument>%geocode.client.endpoint%</argument>
+            <argument>%geocode.client.key%</argument>
+            <argument>%geocode.client.language%</argument>
     	</service>
 	</services>
 </container>
